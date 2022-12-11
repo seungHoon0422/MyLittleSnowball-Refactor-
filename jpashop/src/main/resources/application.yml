@@ -18,3 +18,4 @@ spring:
 logging:
   level:
     org.hibernate.SQL: debug
+    org.hibernate.type: trace # JPA log에 입력되는 변수의 타입을 로그에 남는다.

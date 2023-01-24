@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -19,7 +21,11 @@ public class Board extends BaseEntity{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
-    private String content;
-    private String imageURL;
 
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "snowball_id")
+    private Snowball snowball;
+
+    @OneToMany(mappedBy = "board")
+    private List<Content> contents = new ArrayList<>();
 }

@@ -21,8 +21,8 @@ public class Snowball extends BaseEntity{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "music_id")
     private Music music;
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "board_id")
+
+    @OneToOne(mappedBy = "snowball")
     private Board board;
 
 

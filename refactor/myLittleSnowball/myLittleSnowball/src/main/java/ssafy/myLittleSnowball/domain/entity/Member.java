@@ -16,8 +16,9 @@ public class Member extends BaseEntity{
 
     @Id
     @GeneratedValue
+    @Column(name = "member_id")
     private Long Id;
-    private String name;
+    private String nickname;
     private String email;
 
     @OneToOne(fetch = FetchType.LAZY)
@@ -25,7 +26,7 @@ public class Member extends BaseEntity{
     private Snowball mainSnowball;
 
     @OneToMany(mappedBy = "member")
-    private List<Snowball> snowballList = new ArrayList<>();
+    private List<Snowball> snowballs = new ArrayList<>();
 
 
     // for social login

@@ -8,4 +8,9 @@ import ssafy.myLittleSnowball.domain.entity.Music;
 @Repository
 @Transactional(readOnly = true)
 public interface MusicRepository extends JpaRepository<Music, Long> {
+
+    // 음악 생성
+    @Override
+    <S extends Music> S save(S music);
+
 }

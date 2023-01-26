@@ -14,6 +14,7 @@ public class Snowball extends BaseEntity{
 
     @Id
     @GeneratedValue
+    @Column(name = "snowball_id")
     private Long id;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")

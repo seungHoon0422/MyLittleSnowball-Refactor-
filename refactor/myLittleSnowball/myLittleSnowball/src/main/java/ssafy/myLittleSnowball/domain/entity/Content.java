@@ -12,6 +12,7 @@ import javax.persistence.*;
 public class Content {
 
     @Id @GeneratedValue
+    @Column(name = "content_id")
     Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -19,6 +20,6 @@ public class Content {
     Board board;
 
     String content;
-    String image_url;
+    String imageUrl;
 
 }

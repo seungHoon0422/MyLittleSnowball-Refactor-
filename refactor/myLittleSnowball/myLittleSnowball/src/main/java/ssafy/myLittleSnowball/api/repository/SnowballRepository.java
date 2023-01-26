@@ -8,4 +8,13 @@ import ssafy.myLittleSnowball.domain.entity.Snowball;
 @Repository
 @Transactional(readOnly = true)
 public interface SnowballRepository extends JpaRepository<Snowball, Long> {
+
+    // 스노우볼 생성
+
+    // 스노우볼 커스텀
+
+    // 스노우볼 삭제
+
+
+
 }

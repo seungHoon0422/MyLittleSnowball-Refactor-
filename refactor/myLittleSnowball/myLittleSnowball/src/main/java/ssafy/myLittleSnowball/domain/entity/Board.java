@@ -16,6 +16,7 @@ public class Board extends BaseEntity{
 
 
     @Id @GeneratedValue
+    @Column(name = "board_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -5,6 +5,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,6 +16,7 @@ import javax.persistence.Id;
 public class Music extends BaseEntity{
 
     @Id @GeneratedValue
+    @Column(name = "music_id")
     private Long id;
     private String title;
     private String url;

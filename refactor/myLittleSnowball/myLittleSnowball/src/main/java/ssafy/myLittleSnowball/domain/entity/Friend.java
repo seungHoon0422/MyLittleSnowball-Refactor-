@@ -13,6 +13,7 @@ public class Friend extends BaseEntity{
 
     @Id
     @GeneratedValue
+    @Column(name = "friend_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)

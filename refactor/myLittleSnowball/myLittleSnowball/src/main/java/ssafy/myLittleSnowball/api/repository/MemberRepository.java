@@ -28,6 +28,7 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
     void updateNickname(@Param("member_id") Long memberId, @Param("nickname") String nickname);
 
 
+
     // refresh token 갱신
     @Transactional
     @Modifying

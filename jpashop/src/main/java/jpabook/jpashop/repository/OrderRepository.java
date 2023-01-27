@@ -42,17 +42,17 @@ public class OrderRepository {
      * @param orderSearch
      * @return
      */
-    public List<Order> findAllByCriteria(OrderSearch orderSearch) {
+//    public List<Order> findAllByCriteria(OrderSearch orderSearch) {
+//
+//        CriteriaBuilder cb = em.getCriteriaBuilder();
+//        CriteriaQuery<Order> cq = cb.createQuery(Order.class);
+//        cq.from(Order.class)
+//
+//
+//    }
 
-        CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaQuery<Order> cq = cb.createQuery(Order.class);
-        cq.from(Order.class)
 
-
-    }
-
-
-    public List<Order> serach(String name, OrderStatus status) {
+    public List<Order> search(String name, OrderStatus status) {
 
 
     }

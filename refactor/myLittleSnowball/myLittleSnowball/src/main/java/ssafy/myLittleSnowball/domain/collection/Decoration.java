@@ -25,6 +25,8 @@ public class Decoration {
         this.deco = deco;
     }
 
+
+    // == 생성 로직 == //
     public Decoration ( Long snowglobeId ) {
         this.id = snowglobeId;
         Element defaultElement = new Element(0,0,0,0);
@@ -37,5 +39,13 @@ public class Decoration {
         this.deco.add(new Element(9,-45,-5,55));
         this.deco.add(new Element(0,-70,-11,30));
     }
+
+    // == 비즈니스 로직 == //
+    void changeDeco(Element... elements) {
+        for (Element element : elements) {
+            this.deco.set(element.getIndicator(), element);
+        }
+    }
+
 
 }

@@ -42,7 +42,14 @@ public class Member extends BaseEntity{
     @Column(length = 200)
     private String profileImageUrl;
 
+    // == 생성 로직 == //
 
+
+
+    // == 비즈니스 로직 == //
+    void changeNickname(String nickname) {
+        this.nickname = nickname;
+    }
 
 
 }

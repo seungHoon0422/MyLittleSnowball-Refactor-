@@ -19,7 +19,28 @@ public class Content {
     @JoinColumn(name = "board_id")
     Board board;
 
-    String content;
+    String text;
     String imageUrl;
+
+    // == 생성 로직 == //
+    public static Content createContent(Board board, String text, String imageUrl) {
+        Content content = new Content();
+        content.setContent(text, imageUrl);
+        return content;
+    }
+
+
+    // == 비즈니스 로직 == //
+    void changeContent(String text, String imageUrl) {
+        this.text = text;
+        this.imageUrl = imageUrl;
+    }
+
+    // == 연관관계 메서드 == //
+    public void setContent(String text, String imageUrl) {
+        this.text = text;
+        this.imageUrl = imageUrl;
+    }
+
 
 }

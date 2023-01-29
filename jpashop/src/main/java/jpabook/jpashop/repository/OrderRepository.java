@@ -37,11 +37,11 @@ public class OrderRepository {
                 .getResultList();
     }
 
-    /**
-     * JPA Criteria
-     * @param orderSearch
-     * @return
-     */
+//    /**
+//     * JPA Criteria
+//     * @param orderSearch
+//     * @return
+//     */
 //    public List<Order> findAllByCriteria(OrderSearch orderSearch) {
 //
 //        CriteriaBuilder cb = em.getCriteriaBuilder();
@@ -50,13 +50,6 @@ public class OrderRepository {
 //
 //
 //    }
-
-
-    public List<Order> search(String name, OrderStatus status) {
-
-
-    }
-
 
 
 }

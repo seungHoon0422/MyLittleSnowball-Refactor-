@@ -21,4 +21,9 @@ public class Music extends BaseEntity{
     private String title;
     private String url;
 
+
+    // == 생성 로직 == //
+
+
+    // == 비즈니스 로직 == //
 }

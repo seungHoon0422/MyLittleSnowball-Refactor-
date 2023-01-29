@@ -25,6 +25,7 @@ public class Member extends BaseEntity{
     @JoinColumn(name = "snowball_id")
     private Snowball mainSnowball;
 
+
     @OneToMany(mappedBy = "member")
     private List<Snowball> snowballs = new ArrayList<>();
 

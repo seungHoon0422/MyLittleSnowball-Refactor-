@@ -31,7 +31,7 @@ public class Member extends BaseEntity{
 
     // for social login
 
-    private String kakao_id;
+    private String kakaoId;
 
     //    @Enumerated(EnumType.STRING)
 //    private AuthProvider authProvider;
@@ -43,12 +43,30 @@ public class Member extends BaseEntity{
     private String profileImageUrl;
 
     // == 생성 로직 == //
+    public static Member createMember(String nickname, String email, String kakaoId, String profileImageUrl) {
+        Member member = new Member();
+        member.setBaseInformation(nickname, email, kakaoId, profileImageUrl);
+        member.setDefaultSnowball();
+        return member;
+    }
 
+    private void setDefaultSnowball() {
+//        this.mainSnowball = Snowball.createDefaultSnowball(this);
+    }
 
 
     // == 비즈니스 로직 == //
     void changeNickname(String nickname) {
         this.nickname = nickname;
+    }
+
+
+    // == setter == //
+    public void setBaseInformation(String nickname, String email, String kakaoId, String profileImageUrl) {
+        this.nickname = nickname;
+        this.email = email;
+        this.kakaoId = kakaoId;
+        this.profileImageUrl = profileImageUrl;
     }
 
 
